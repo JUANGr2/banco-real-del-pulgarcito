@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Banco Real del Pulgarcito</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Banco Real del Pulgarcito: cuentas, tarjetas, créditos, seguros e inversiones para personas, pymes y empresas de El Salvador. Proyecto conceptual de diseño.">
+<meta name="theme-color" content="#06183f">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js', 'js-espera');</script>
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<!-- Telón de entrada: solo aparece con JavaScript y se retira solo si algo falla -->
+<div class="intro" aria-hidden="true">
+  <img class="intro__emblema" src="img/emblema-invertido.webp" alt="" width="730" height="675">
+</div>
+
+<!-- ===================== NAVEGACIÓN ===================== -->
+<header class="nav" id="nav">
+  <div class="envoltura nav__barra">
+    <a class="nav__marca" href="#inicio" aria-label="Banco Real del Pulgarcito, ir al inicio">
+      <img src="img/monograma.webp" alt="" width="490" height="555">
+      <span class="nav__nombre">Banco Real <span>del Pulgarcito</span></span>
+    </a>
+    <nav class="nav__enlaces" aria-label="Principal">
+      <a href="#cuentas">Personas</a>
+      <a href="#pyme">Pyme</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#ayuda">Ayuda</a>
+    </nav>
+    <a class="boton nav__accion" href="#app">Banca en línea</a>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="nav__menu-texto">Menú</span>
+    </button>
+  </div>
+</header>
+
+<!-- Menú de pantalla completa para teléfonos -->
+<div class="menu" id="menu" hidden>
+  <nav class="envoltura menu__lista" aria-label="Menú">
+    <a href="#soluciones">Soluciones</a>
+    <a href="#cuentas">Cuentas</a>
+    <a href="#tarjetas">Tarjetas</a>
+    <a href="#creditos">Créditos</a>
+    <a href="#inversiones">Inversiones y seguros</a>
+    <a href="#exterior">Remesas y divisas</a>
+    <a href="#pyme">Pyme</a>
+    <a href="#empresas">Empresas y Gobierno</a>
+    <a href="#app">Banca en línea</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</div>
+
+<main id="contenido">
+
+  <!-- ===================== 1. PORTADA ===================== -->
+  <section class="portada" id="inicio" aria-labelledby="titulo-portada">
+    <div class="portada__escena">
+      <div class="envoltura portada__interior">
+        <h1 class="portada__titulo" id="titulo-portada">
+          <span class="portada__linea portada__linea--a" data-intro><span class="portada__palabras">La grandeza</span><span class="portada__pulgar" aria-hidden="true"><img src="img/hero-izalco.jpg" alt="" width="1920" height="1080"></span></span>
+          <span class="portada__linea portada__linea--b" data-intro>de una nación</span>
+        </h1>
+        <div class="portada__pie">
+          <div class="portada__texto" data-intro>
+            <p>Cuentas, tarjetas, créditos, seguros e inversiones para personas, pymes y empresas de El&nbsp;Salvador.</p>
+            <div class="acciones">
+              <a class="boton boton--oro" href="#cuentas">Abre tu cuenta digital</a>
+              <a class="enlace enlace--claro" href="#simulador">Simula tu crédito <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <nav class="portada__tareas" aria-label="¿Qué quieres hacer hoy?" data-intro>
+            <p>¿Qué quieres hacer hoy?</p>
+            <ul>
+              <li><a href="#exterior">Recibir mi remesa</a></li>
+              <li><a href="#pyme">Impulsar mi negocio</a></li>
+              <li><a href="#app">Pagar con código QR</a></li>
+              <li><a href="#contacto">Encontrar una agencia</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <figure class="portada__foto">
+        <img src="img/hero-izalco.jpg" alt="El volcán de Izalco, un cono perfecto rodeado de bosque bajo un cielo azul" width="1920" height="1080" fetchpriority="high">
+        <figcaption class="portada__leyenda">
+          <p class="declaracion">Le dicen el Pulgarcito de América por su tamaño. Nosotros tomamos el nombre por su grandeza.</p>
+          <p class="nota">Volcán de Izalco, el Faro del Pacífico, visto desde el volcán de Santa&nbsp;Ana.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== 2. SOLUCIONES (Personas, Preferencial, Pyme, Empresas) ===================== -->
+  <section class="soluciones" id="soluciones" aria-labelledby="titulo-soluciones">
+    <div class="envoltura">
+      <header class="cabecera">
+        <h2 class="titulo-l" id="titulo-soluciones">Soluciones para cada etapa</h2>
+        <p class="entrada">Elige tu perfil y te mostramos lo que tenemos para ti, desde tu primera cuenta hasta la tesorería de tu empresa.</p>
+      </header>
+
+      <div class="soluciones__cuerpo">
+        <div class="soluciones__lado">
+          <div class="pestanas" role="tablist" aria-label="Perfil">
+            <button class="pestana" type="button" role="tab" id="tab-personas" aria-controls="panel-personas" aria-selected="true">Personas</button>
+            <button class="pestana" type="button" role="tab" id="tab-preferencial" aria-controls="panel-preferencial" aria-selected="false" tabindex="-1">Preferencial</button>
+            <button class="pestana" type="button" role="tab" id="tab-pyme" aria-controls="panel-pyme" aria-selected="false" tabindex="-1">Pyme</button>
+            <button class="pestana" type="button" role="tab" id="tab-empresas" aria-controls="panel-empresas" aria-selected="false" tabindex="-1">Empresas y Gobierno</button>
+          </div>
+          <div class="soluciones__fotos">
+            <figure class="soluciones__foto es-activa" data-perfil="personas">
+              <img src="img/personas-coatepeque.jpg" alt="El lago de Coatepeque, de agua turquesa, rodeado por el borde verde de la caldera" width="1280" height="960" loading="lazy">
+              <figcaption class="nota">Lago de Coatepeque, Santa Ana.</figcaption>
+            </figure>
+            <figure class="soluciones__foto" data-perfil="preferencial">
+              <img src="img/preferencial-teatro-techo.jpg" alt="Pintura del techo del Teatro Nacional de San Salvador, con figuras alegóricas y marcos dorados" width="1280" height="1707" loading="lazy">
+              <figcaption class="nota">Techo del Teatro Nacional, San Salvador.</figcaption>
+            </figure>
+            <figure class="soluciones__foto" data-perfil="pyme">
+              <img src="img/pyme-pupusas-curtido.jpg" alt="Plato de pupusas con curtido de repollo y salsa de tomate" width="1280" height="960" loading="lazy">
+              <figcaption class="nota">Pupusas con curtido y salsa.</figcaption>
+            </figure>
+            <figure class="soluciones__foto" data-perfil="empresas">
+              <img src="img/empresas-palacio.jpg" alt="Fachada del Palacio Nacional de San Salvador con sus columnas y techos rojos" width="1280" height="853" loading="lazy">
+              <figcaption class="nota">Palacio Nacional, Centro Histórico de San Salvador.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="soluciones__paneles">
+          <div class="panel-lista" role="tabpanel" id="panel-personas" aria-labelledby="tab-personas">
+            <ul class="productos">
+              <li><a href="#cuentas"><h3>Cuentas de ahorro</h3><p>Ahorra y administra tu dinero de forma fácil y segura.</p></a></li>
+              <li><a href="#cuentas"><h3>Cuenta corriente</h3><p>Paga con cheques y controla tus movimientos desde la app.</p></a></li>
+              <li><a href="#tarjetas"><h3>Tarjetas de crédito</h3><p>Puntos, beneficios y compras en cuotas en miles de comercios.</p></a></li>
+              <li><a href="#tarjetas"><h3>Tarjetas de débito</h3><p>Compra en todo el mundo con el dinero de tu cuenta.</p></a></li>
+              <li><a href="#creditos"><h3>Créditos</h3><p>Personal, vivienda, vehículo y estudios, con cuotas a tu medida.</p></a></li>
+              <li><a href="#inversiones"><h3>Inversiones</h3><p>Depósitos a plazo y fondos de inversión con asesoría.</p></a></li>
+              <li><a href="#inversiones"><h3>Seguros</h3><p>Vida, salud y asistencia para ti y tu familia.</p></a></li>
+              <li><a href="#exterior"><h3>Cobro de remesas</h3><p>Recibe el dinero de tu familia rápido y seguro.</p></a></li>
+              <li><a href="#exterior"><h3>Salvadoreños en el exterior</h3><p>Cuentas y créditos para construir aquí desde allá.</p></a></li>
+            </ul>
+          </div>
+          <div class="panel-lista" role="tabpanel" id="panel-preferencial" aria-labelledby="tab-preferencial">
+            <ul class="productos">
+              <li><a href="#contacto"><h3>Ejecutivo dedicado</h3><p>Una persona que conoce tus metas y te atiende con prioridad.</p></a></li>
+              <li><a href="#cuentas"><h3>Cuentas Preferencial</h3><p>Mejores rendimientos y beneficios superiores en tus cuentas.</p></a></li>
+              <li><a href="#tarjetas"><h3>Tarjetas Platino y Corona</h3><p>Salas VIP, asistencia en viajes y concierge las 24 horas.</p></a></li>
+              <li><a href="#inversiones"><h3>Inversiones a la medida</h3><p>Asesoría especializada para diversificar tu patrimonio.</p></a></li>
+              <li><a href="#creditos"><h3>Sobregiro Preferencial</h3><p>Una línea de crédito rotativa asociada a tu cuenta, sin garantía.</p></a></li>
+              <li><a href="#tarjetas"><h3>Promociones exclusivas</h3><p>Experiencias y descuentos solo para clientes preferenciales.</p></a></li>
+            </ul>
+          </div>
+          <div class="panel-lista" role="tabpanel" id="panel-pyme" aria-labelledby="tab-pyme">
+            <ul class="productos">
+              <li><a href="#pyme"><h3>Crédito decreciente</h3><p>Financia locales, maquinaria o remodelaciones.</p></a></li>
+              <li><a href="#pyme"><h3>Línea de crédito rotativa</h3><p>Liquidez inmediata para inventario, planilla o proveedores.</p></a></li>
+              <li><a href="#pyme"><h3>Crédito Mujer Emprende</h3><p>Tasas preferenciales y asesoría para empresas lideradas por mujeres.</p></a></li>
+              <li><a href="#pyme"><h3>Plataformas de pago</h3><p>Cobra con POS, código QR o una pasarela en línea.</p></a></li>
+              <li><a href="#pyme"><h3>Tarjetas Pyme</h3><p>Para los gastos operativos y estratégicos de tu negocio.</p></a></li>
+              <li><a href="#pyme"><h3>Seguros Pyme</h3><p>Protege tu local, tu inventario y a tu equipo.</p></a></li>
+              <li><a href="#app"><h3>e-banca Empresarial</h3><p>Consultas, transferencias y pagos desde donde estés.</p></a></li>
+            </ul>
+          </div>
+          <div class="panel-lista" role="tabpanel" id="panel-empresas" aria-labelledby="tab-empresas">
+            <ul class="productos">
+              <li><a href="#empresas"><h3>Financiamiento</h3><p>Créditos de corto y largo plazo para las metas de tu empresa.</p></a></li>
+              <li><a href="#empresas"><h3>Cash Management</h3><p>Pagos a proveedores, planillas y recaudación en un solo lugar.</p></a></li>
+              <li><a href="#empresas"><h3>Transferencias regionales</h3><p>Envía fondos a bancos de Centroamérica y República Dominicana.</p></a></li>
+              <li><a href="#empresas"><h3>Servicios internacionales</h3><p>Pagos a proveedores y filiales en varias monedas.</p></a></li>
+              <li><a href="#empresas"><h3>Factura electrónica</h3><p>Integración con el Ministerio de Hacienda para tus DTE.</p></a></li>
+              <li><a href="#empresas"><h3>Crédito para desarrollo sostenible</h3><p>Financiamiento para proyectos con impacto ambiental y social.</p></a></li>
+              <li><a href="#empresas"><h3>Depósito a plazo digital</h3><p>Contrátalo desde la e-banca Empresarial, al plazo que prefieras.</p></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. CUENTAS ===================== -->
+  <section class="cuentas" id="cuentas" aria-labelledby="titulo-cuentas">
+    <div class="envoltura">
+      <header class="cabecera">
+        <h2 class="titulo-l" id="titulo-cuentas">Una cuenta para cada edad</h2>
+        <p class="entrada">Desde la primera alcancía hasta la cuenta donde recibes tu salario. Ábrela en una agencia o 100&nbsp;% en línea desde la app.</p>
+      </header>
+    </div>
+
+    <figure class="expande" data-expande>
+      <div class="expande__marco">
+        <img src="img/cuentas-suchitoto.jpg" alt="Esquina de Suchitoto con una casa colonial amarilla, calle empedrada y la iglesia blanca" width="1920" height="1440" loading="lazy">
+      </div>
+      <figcaption class="envoltura nota">Calle de Suchitoto, Cuscatlán.</figcaption>
+    </figure>
+
+    <div class="envoltura">
+      <ul class="filas">
+        <li class="fila">
+          <h3 class="titulo-m">Cuenta de Ahorro Digital</h3>
+          <div>
+            <p>Ábrela desde la app en minutos, sin ir a una agencia.</p>
+            <p class="datos">Mayores de 18 años · Sin monto mínimo de apertura · Tarjeta de débito digital opcional</p>
+          </div>
+        </li>
+        <li class="fila">
+          <h3 class="titulo-m">Cuenta de Ahorro Electrónica</h3>
+          <div>
+            <p>Para mover tu dinero con agilidad en los canales digitales.</p>
+            <p class="datos">Desde 16 años · Apertura desde $5.00 · Tarjeta de débito opcional</p>
+          </div>
+        </li>
+        <li class="fila">
+          <h3 class="titulo-m">Cuenta Pulgarcitos</h3>
+          <div>
+            <p>La más divertida, para que niñas, niños y jóvenes aprendan a ahorrar.</p>
+            <p class="datos">Menores de 18 años · Apertura desde $25.00 · Con una persona adulta responsable</p>
+          </div>
+        </li>
+        <li class="fila">
+          <h3 class="titulo-m">Cuenta Raíces</h3>
+          <div>
+            <p>Pensada para quienes reciben remesas de su familia en el exterior.</p>
+            <p class="datos">Mayores de 18 años · Con libreta $25.00 · Sin libreta $5.00</p>
+          </div>
+        </li>
+        <li class="fila">
+          <h3 class="titulo-m">Cuenta Corriente</h3>
+          <div>
+            <p>Con chequera, sobregiro disponible y control de tus pagos desde la app.</p>
+            <p class="datos">Personas y negocios · Requisitos según tu perfil</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="requisitos">
+        <h3 class="titulo-m">¿Qué necesitas para abrirla?</h3>
+        <div class="requisitos__columnas">
+          <div>
+            <h4>Si eres salvadoreño</h4>
+            <ul class="lista">
+              <li>DUI vigente, desde los 16 años.</li>
+              <li>De 0 a 12 años: partida de nacimiento y NIT.</li>
+              <li>De 13 a 17 años: carné de minoridad y NIT.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Si eres extranjero</h4>
+            <ul class="lista">
+              <li>Pasaporte o carné de residente vigente y NIT salvadoreño.</li>
+              <li>Comprobante de domicilio, como una factura de servicios.</li>
+              <li>Comprobante de arraigo: constancia laboral, declaración de renta o contrato de arrendamiento.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="nota">El monto mínimo de apertura va de $0.00 a $25.00 según la cuenta. Si la abres para recibir tu salario, lleva tu constancia laboral.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. TARJETAS ===================== -->
+  <section class="tarjetas" id="tarjetas" aria-labelledby="titulo-tarjetas">
+    <div class="envoltura tarjetas__rejilla">
+      <div class="tarjetas__texto">
+        <h2 class="titulo-l" id="titulo-tarjetas">Elige la tarjeta que va contigo</h2>
+        <p class="entrada">Crédito o débito, con Puntos Real en cada compra, cuotas sin intereses en comercios afiliados y alertas al instante en tu celular.</p>
+
+        <div class="niveles" role="radiogroup" aria-label="Tipo de tarjeta de crédito">
+          <button type="button" class="nivel" role="radio" aria-checked="true" data-nivel="clasica">Clásica</button>
+          <button type="button" class="nivel" role="radio" aria-checked="false" data-nivel="oro" tabindex="-1">Oro</button>
+          <button type="button" class="nivel" role="radio" aria-checked="false" data-nivel="platino" tabindex="-1">Platino</button>
+          <button type="button" class="nivel" role="radio" aria-checked="false" data-nivel="corona" tabindex="-1">Corona</button>
+        </div>
+
+        <div class="beneficios" aria-live="polite">
+          <p class="beneficios__lema" data-texto="lema">Para tus compras de todos los días, sin complicaciones.</p>
+          <ul class="lista lista--oro" data-texto="lista">
+            <li>Puntos Real en cada compra</li>
+            <li>Compras en cuotas en comercios afiliados</li>
+            <li>Alertas por SMS y correo electrónico</li>
+            <li>Seguro antifraude opcional</li>
+          </ul>
+        </div>
+
+        <p class="tarjetas__extra">¿Prefieres débito? Tenemos tarjetas Clásica, Platino, Black, Joven y Pulgarcitos para comprar en todo el mundo con el dinero de tu cuenta. Y si no quieres pagar anualidad, pide la Tarjeta de Crédito sin Membresía.</p>
+        <a class="boton boton--oro" href="#contacto">Solicitar tarjeta</a>
+      </div>
+
+      <div class="tarjetas__escena" aria-hidden="true">
+        <div class="tarjeta" data-nivel="clasica">
+          <div class="tarjeta__cara">
+            <span class="tarjeta__monograma">
+              <img class="tarjeta__marca tarjeta__marca--oro" src="img/monograma.webp" alt="" width="490" height="555">
+              <img class="tarjeta__marca tarjeta__marca--marino" src="img/monograma-marino.webp" alt="" width="490" height="555">
+            </span>
+            <span class="tarjeta__chip"></span>
+            <span class="tarjeta__nivel">Clásica</span>
+            <span class="tarjeta__numero">•••• •••• •••• 2026</span>
+            <span class="tarjeta__banco">Banco Real del Pulgarcito</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. CRÉDITOS + SIMULADOR ===================== -->
+  <section class="creditos" id="creditos" aria-labelledby="titulo-creditos">
+    <div class="envoltura">
+      <header class="cabecera">
+        <h2 class="titulo-l" id="titulo-creditos">Conoce tu cuota antes de pedirla</h2>
+        <p class="entrada">Detrás de cada meta hay una historia: una casa, un carro, un título. Elige el crédito, mueve el monto y el plazo, y mira cuánto pagarías al mes.</p>
+      </header>
+
+      <div class="creditos__cuerpo">
+        <ul class="creditos__lista">
+          <li><h3>Crédito personal</h3><p>Con orden de descuento, con cargo a tu cuenta o con garantía hipotecaria para consolidar tus deudas en una sola cuota.</p></li>
+          <li><h3>Crédito de vivienda</h3><p>Financiamiento a largo plazo para comprar, construir o remodelar. Solicítalo individual o mancomunado.</p></li>
+          <li><h3>Crédito para vehículo</h3><p>Estrena el carro que quieres, nuevo o usado, con hasta el 90&nbsp;% de financiamiento.</p></li>
+          <li><h3>Crédito de estudios</h3><p>Para tus estudios en el país o en el extranjero, con condiciones que se adaptan a ti.</p></li>
+          <li><h3>Adelanto de salario</h3><p>Un respiro antes de fin de mes: accede a tu dinero cuando lo necesites.</p></li>
+          <li><h3>Extrafinanciamiento</h3><p>Un crédito adicional al límite de tu tarjeta de crédito.</p></li>
+          <li><h3>Créditos para repatriados</h3><p>Para quienes regresan al país de forma permanente y quieren empezar de nuevo.</p></li>
+        </ul>
+
+        <form class="simulador" id="simulador" aria-labelledby="titulo-simulador">
+          <h3 class="titulo-m" id="titulo-simulador">Simulador de cuota</h3>
+
+          <fieldset class="simulador__tipos">
+            <legend>Tipo de crédito</legend>
+            <label><input type="radio" name="sim-tipo" value="personal" checked><span>Personal</span></label>
+            <label><input type="radio" name="sim-tipo" value="vivienda"><span>Vivienda</span></label>
+            <label><input type="radio" name="sim-tipo" value="vehiculo"><span>Vehículo</span></label>
+            <label><input type="radio" name="sim-tipo" value="estudios"><span>Estudios</span></label>
+          </fieldset>
+
+          <div class="control">
+            <label for="sim-monto">Monto</label>
+            <output for="sim-monto" id="sim-monto-valor">$8,000</output>
+            <input type="range" id="sim-monto" min="500" max="40000" step="250" value="8000">
+          </div>
+          <div class="control">
+            <label for="sim-plazo">Plazo</label>
+            <output for="sim-plazo" id="sim-plazo-valor">48 meses</output>
+            <input type="range" id="sim-plazo" min="6" max="96" step="6" value="48">
+          </div>
+          <div class="control">
+            <label for="sim-tasa">Tasa de interés anual</label>
+            <output for="sim-tasa" id="sim-tasa-valor">15.50 %</output>
+            <input type="range" id="sim-tasa" min="3" max="30" step="0.25" value="15.5">
+          </div>
+
+          <div class="resultado" aria-live="polite">
+            <p class="resultado__etiqueta">Tu cuota mensual</p>
+            <p class="resultado__cuota" id="sim-cuota">$224.68</p>
+            <div class="resultado__barra" aria-hidden="true"><span id="sim-barra" style="width: 74.2%"></span></div>
+            <dl class="resultado__totales">
+              <div><dt>Capital</dt><dd id="sim-capital">$8,000.00</dd></div>
+              <div><dt>Intereses</dt><dd id="sim-intereses">$2,784.59</dd></div>
+              <div><dt>Total a pagar</dt><dd id="sim-total">$10,784.59</dd></div>
+            </dl>
+          </div>
+          <p class="nota">Cálculo ilustrativo con cuota fija mensual. No incluye seguros, comisiones ni impuestos.</p>
+          <a class="boton boton--oro" href="#contacto">Quiero este crédito</a>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. INVERSIONES Y SEGUROS (galería horizontal) ===================== -->
+  <section class="crecer" id="inversiones" aria-labelledby="titulo-crecer">
+    <div class="crecer__fijo">
+      <div class="crecer__pista">
+        <div class="pieza pieza--titulo">
+          <h2 class="titulo-l" id="titulo-crecer">Haz crecer y protege lo tuyo</h2>
+          <p class="entrada">Inversiones con asesoría especializada y seguros para que tu familia viva tranquila, sin dejar de disfrutar cada momento.</p>
+        </div>
+        <article class="pieza">
+          <figure class="pieza__foto"><img src="img/plazo-ilopango.jpg" alt="El lago de Ilopango en calma bajo un cielo despejado" width="1280" height="720" loading="lazy"></figure>
+          <p class="pieza__tipo">Inversión</p>
+          <h3 class="titulo-m">Depósito a plazo</h3>
+          <p>Deposita tus fondos a un plazo definido con tasa de interés fija. Elige el plazo y recibe tus intereses al vencimiento o cada mes.</p>
+        </article>
+        <article class="pieza">
+          <figure class="pieza__foto"><img src="img/fondos-santa-ana.jpg" alt="Laguna turquesa dentro del cráter del volcán de Santa Ana" width="1280" height="960" loading="lazy"></figure>
+          <p class="pieza__tipo">Inversión</p>
+          <h3 class="titulo-m">Fondos y tesorería</h3>
+          <p>Rentabiliza tu dinero con un equipo de expertos: fondos de inversión, productos de tesorería e intermediación en la bolsa de valores.</p>
+        </article>
+        <article class="pieza">
+          <figure class="pieza__foto"><img src="img/vida-el-tunco.jpg" alt="Atardecer en la playa El Tunco con la silueta de la roca frente al mar" width="1280" height="852" loading="lazy"></figure>
+          <p class="pieza__tipo">Seguro</p>
+          <h3 class="titulo-m">Vida</h3>
+          <p>Planes Vida Segura y Vida Integral: tranquilidad para tu familia ante cualquier eventualidad o enfermedad grave.</p>
+        </article>
+        <article class="pieza">
+          <figure class="pieza__foto"><img src="img/salud-ataco.jpg" alt="Cascada entre la vegetación cerca de Concepción de Ataco" width="1280" height="960" loading="lazy"></figure>
+          <p class="pieza__tipo">Seguro</p>
+          <h3 class="titulo-m">Salud y asistencia</h3>
+          <p>Renta diaria si te hospitalizan por enfermedad o accidente, y asistencias disponibles las 24 horas.</p>
+        </article>
+        <article class="pieza">
+          <figure class="pieza__foto"><img src="img/educacion-teatro.jpg" alt="Fachada del Teatro Nacional de San Salvador" width="1280" height="848" loading="lazy"></figure>
+          <p class="pieza__tipo">Seguro</p>
+          <h3 class="titulo-m">Futuro escolar</h3>
+          <p>Asegura la educación de tus hijos hasta que terminen la universidad, pase lo que pase.</p>
+        </article>
+        <article class="pieza pieza--campo">
+          <h3 class="titulo-m">Protege también tus tarjetas</h3>
+          <p>Tarjeta Protegida para tu débito, Seguro Antifraude para compras no autorizadas en tiendas o en internet, y Seguros de Deuda asociados a tus créditos.</p>
+          <a class="boton boton--marino" href="#contacto">Hablar con un asesor</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 7. SALVADOREÑOS EN EL EXTERIOR, REMESAS Y DIVISAS ===================== -->
+  <section class="exterior" id="exterior" aria-labelledby="titulo-exterior">
+    <div class="exterior__rejilla">
+      <figure class="exterior__foto">
+        <div class="exterior__marco"><img src="img/exterior-muelle.jpg" alt="Muelle de madera que se adentra en el lago de Coatepeque una mañana de bruma" width="1920" height="1440" loading="lazy"></div>
+        <figcaption class="nota">Muelle en el lago de Coatepeque.</figcaption>
+      </figure>
+
+      <div class="exterior__texto">
+        <h2 class="titulo-l" id="titulo-exterior">Cerca, aunque estés lejos</h2>
+        <p class="entrada">Para el hermano lejano y para quien lo espera: cobra remesas, ahorra y construye aquí desde cualquier parte del mundo.</p>
+
+        <div class="servicios">
+          <div>
+            <h3>Cobro de remesas</h3>
+            <p>Recibe el dinero de tu familia en agencias, cajeros y corresponsales, o directo en tu Cuenta Raíces.</p>
+          </div>
+          <div>
+            <h3>Salvadoreños en el exterior</h3>
+            <p>Abre tu cuenta, invierte o compra tu casa en El Salvador sin dejar de vivir donde estás.</p>
+          </div>
+          <div>
+            <h3>Servicios internacionales</h3>
+            <p>Envía o recibe transferencias en varias monedas y cobra los pagos de plataformas internacionales y de trabajo remoto.</p>
+          </div>
+        </div>
+
+        <div class="divisas">
+          <h3 class="titulo-m">Compra y venta de divisas</h3>
+          <form class="conversor" id="conversor" aria-label="Conversor de divisas">
+            <div class="conversor__campos">
+              <div class="campo">
+                <label for="conv-monto" id="conv-etiqueta">Tengo dólares</label>
+                <input type="number" id="conv-monto" inputmode="decimal" min="0" step="1" value="100">
+              </div>
+              <button type="button" class="conversor__invertir" id="conv-invertir" aria-label="Invertir la conversión">⇄</button>
+              <div class="campo">
+                <label for="conv-moneda">Quiero</label>
+                <select id="conv-moneda">
+                  <option value="EUR">Euro (EUR)</option>
+                  <option value="GBP">Libra esterlina (GBP)</option>
+                  <option value="CAD">Dólar canadiense (CAD)</option>
+                  <option value="MXN">Peso mexicano (MXN)</option>
+                  <option value="GTQ">Quetzal (GTQ)</option>
+                  <option value="CHF">Franco suizo (CHF)</option>
+                  <option value="JPY">Yen japonés (JPY)</option>
+                  <option value="CNY">Yuan (CNY)</option>
+                </select>
+              </div>
+            </div>
+            <p class="conversor__resultado" aria-live="polite">Recibes <strong id="conv-resultado">86.70 EUR</strong></p>
+          </form>
+
+          <div class="tabla-envoltura">
+            <table class="tabla">
+              <caption>Tipo de cambio de referencia, en dólares por unidad</caption>
+              <thead><tr><th scope="col">Moneda</th><th scope="col">Compra</th><th scope="col">Venta</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Euro (EUR)</th><td>1.0829</td><td>1.1534</td></tr>
+                <tr><th scope="row">Libra esterlina (GBP)</th><td>1.3014</td><td>1.3824</td></tr>
+                <tr><th scope="row">Dólar canadiense (CAD)</th><td>0.6805</td><td>0.7425</td></tr>
+                <tr><th scope="row">Peso mexicano (MXN)</th><td>0.0514</td><td>0.0562</td></tr>
+                <tr><th scope="row">Quetzal (GTQ)</th><td>0.1256</td><td>0.1405</td></tr>
+                <tr><th scope="row">Franco suizo (CHF)</th><td>1.1794</td><td>1.2494</td></tr>
+                <tr><th scope="row">Yen japonés (JPY)</th><td>0.0060</td><td>0.0066</td></tr>
+                <tr><th scope="row">Yuan (CNY)</th><td>0.1349</td><td>0.1649</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="nota">Valores de ejemplo. Al comprar una divisa pagas el precio de venta; al venderla recibes el precio de compra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 8. PYME ===================== -->
+  <section class="pyme" id="pyme" aria-labelledby="titulo-pyme">
+    <div class="pyme__escena">
+      <div class="envoltura pyme__titular">
+        <h2 class="titulo-l" id="titulo-pyme">Cada pupusería es una empresa</h2>
+        <p class="entrada">Tu negocio es el motor del país. Te acompañamos con crédito, cobros digitales, seguros y asesoría para crecer.</p>
+      </div>
+      <figure class="pyme__foto">
+        <img src="img/pyme-pupusas.jpg" alt="Pupusas recién hechas apiladas en una bandeja en una pupusería de San Salvador" width="1920" height="1440" loading="lazy">
+        <span class="pyme__velo" aria-hidden="true"></span>
+      </figure>
+    </div>
+
+    <div class="envoltura pyme__cuerpo">
+      <div class="grupo">
+        <h3 class="titulo-m">Financiación</h3>
+        <dl class="definiciones">
+          <div><dt>Crédito decreciente</dt><dd>Financia activos para tu negocio: locales, maquinaria o remodelaciones.</dd></div>
+          <div><dt>Línea de crédito rotativa</dt><dd>Liquidez inmediata para inventario, planilla o proveedores.</dd></div>
+          <div><dt>Línea de crédito fija</dt><dd>Para inversiones clave como equipos o proyectos de expansión.</dd></div>
+          <div><dt>Sobregiro autorizado</dt><dd>Fondos al instante para gastos urgentes o imprevistos.</dd></div>
+          <div><dt>Crédito Mujer Emprende</dt><dd>Tasas preferenciales y asesoría personalizada para mujeres líderes.</dd></div>
+          <div><dt>Tarjetas Pyme</dt><dd>Para las necesidades operativas y estratégicas de tu empresa.</dd></div>
+        </dl>
+      </div>
+      <div class="grupo">
+        <h3 class="titulo-m">Cobros y operación</h3>
+        <dl class="definiciones">
+          <div><dt>Plataformas de pago</dt><dd>Cobra con POS, código QR o enlaces de pago.</dd></div>
+          <div><dt>Pasarela de pagos en línea</dt><dd>Vende desde tus redes sociales o tu sitio web, sin membresía.</dd></div>
+          <div><dt>e-banca Empresarial</dt><dd>Consultas, transferencias y pagos desde donde estés.</dd></div>
+          <div><dt>Seguros Pyme</dt><dd>Protege tu local, tu inventario y a tu equipo.</dd></div>
+          <div><dt>Cursos para emprender</dt><dd>Mentorías y cursos gratuitos para fortalecer tu negocio.</dd></div>
+        </dl>
+        <a class="boton boton--oro" href="#contacto">Quiero ser cliente Pyme</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 9. EMPRESAS Y GOBIERNO ===================== -->
+  <section class="empresas" id="empresas" aria-labelledby="titulo-empresas">
+    <div class="envoltura">
+      <header class="cabecera">
+        <h2 class="titulo-l" id="titulo-empresas">Del cafetal a la exportación</h2>
+        <p class="entrada">Impulsamos a tu empresa con asesoría especializada y un portafolio completo para operar, financiarte e invertir, aquí y en la región.</p>
+      </header>
+    </div>
+    <figure class="archivo">
+      <div class="archivo__marco"><img src="img/empresas-cafe-1927.jpg" alt="Fotografía en blanco y negro de trabajadores en una finca de café de El Salvador en 1927" width="1920" height="1111" loading="lazy"></div>
+      <figcaption class="envoltura nota">Trabajadores en una finca de café de El Salvador, 1927.</figcaption>
+    </figure>
+    <div class="envoltura">
+      <dl class="definiciones definiciones--dos">
+        <div><dt>Financiamiento</dt><dd>Créditos de corto y largo plazo, líneas rotativas y comercio exterior.</dd></div>
+        <div><dt>Cuentas empresariales</dt><dd>Cuentas corrientes y de ahorro para tu operación diaria.</dd></div>
+        <div><dt>Cash Management</dt><dd>Pagos a proveedores, planillas y recaudación en una sola plataforma.</dd></div>
+        <div><dt>Depósito a plazo digital</dt><dd>Contrátalo desde la e-banca Empresarial o la App Empresas.</dd></div>
+        <div><dt>Transferencias regionales</dt><dd>Envía fondos a bancos de Centroamérica y República Dominicana.</dd></div>
+        <div><dt>Servicios internacionales</dt><dd>Paga a proveedores del exterior y transfiere a tus filiales en varias monedas.</dd></div>
+        <div><dt>Factura electrónica</dt><dd>Integración con el Ministerio de Hacienda para emitir y guardar tus Documentos Tributarios Electrónicos.</dd></div>
+        <div><dt>Crédito para desarrollo sostenible</dt><dd>Financiamiento para proyectos con impacto ambiental y social.</dd></div>
+        <div><dt>App Empresas</dt><dd>Aprueba pagos y revisa saldos desde el celular.</dd></div>
+        <div><dt>Contracargos</dt><dd>Guías y acompañamiento para resolver disputas de pagos con tarjeta.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===================== 10. BANCA EN LÍNEA Y APP ===================== -->
+  <section class="app" id="app" aria-labelledby="titulo-app">
+    <div class="envoltura app__rejilla">
+      <div class="app__texto">
+        <h2 class="titulo-l" id="titulo-app">El banco al alcance del pulgar</h2>
+        <p class="entrada">Con la app Real y la e-banca haces casi todo desde tu celular o tu computadora, a cualquier hora y desde cualquier lugar.</p>
+        <ol class="pasos">
+          <li class="paso es-activo" data-pantalla="0"><button type="button"><span class="paso__titulo">Abre tu cuenta sin ir a la agencia</span><span class="paso__texto">Escanea tu DUI, tómate una foto y firma con tu huella.</span></button></li>
+          <li class="paso" data-pantalla="1"><button type="button"><span class="paso__titulo">Paga con código QR</span><span class="paso__texto">En el comercio de la esquina o en la tienda en línea, desde tu Banca Móvil.</span></button></li>
+          <li class="paso" data-pantalla="2"><button type="button"><span class="paso__titulo">Transfiere y paga servicios</span><span class="paso__texto">Luz, agua, internet y transferencias a otros bancos, también en Centroamérica.</span></button></li>
+          <li class="paso" data-pantalla="3"><button type="button"><span class="paso__titulo">Recibe alertas al instante</span><span class="paso__texto">Te avisamos de cada abono, compra y cheque con Alertas Real.</span></button></li>
+          <li class="paso" data-pantalla="4"><button type="button"><span class="paso__titulo">Bloquea tu tarjeta con un toque</span><span class="paso__texto">Si la pierdes, la bloqueas desde la app y pides otra.</span></button></li>
+        </ol>
+      </div>
+
+      <div class="app__telefono">
+        <div class="telefono" data-ui aria-label="Vista de la app Real" role="img">
+          <div class="telefono__pantalla">
+            <div class="telefono__barra"><span>9:41</span><span>Real</span></div>
+            <div class="vista es-activa" data-vista="0">
+              <p class="vista__titulo">Cuenta de Ahorro Digital</p>
+              <p class="vista__sub">Ábrela en tres pasos</p>
+              <ul class="vista__pasos">
+                <li class="hecho">Escanea tu DUI</li>
+                <li class="hecho">Tómate una foto</li>
+                <li>Firma con tu huella</li>
+              </ul>
+              <span class="vista__boton">Abrir cuenta</span>
+            </div>
+            <div class="vista" data-vista="1">
+              <p class="vista__titulo">Pagar con QR</p>
+              <div class="vista__qr"><span></span></div>
+              <p class="vista__sub">Pupusería La Ceiba</p>
+              <p class="vista__monto">$8.50</p>
+              <span class="vista__boton">Pagar</span>
+            </div>
+            <div class="vista" data-vista="2">
+              <p class="vista__titulo">Pagos</p>
+              <ul class="vista__lista">
+                <li><span>Energía eléctrica</span><span>$34.20</span></li>
+                <li><span>Agua potable</span><span>$12.80</span></li>
+                <li><span>Internet</span><span>$29.99</span></li>
+                <li><span>Transferencia a Ana</span><span>$50.00</span></li>
+              </ul>
+              <span class="vista__boton">Nuevo pago</span>
+            </div>
+            <div class="vista" data-vista="3">
+              <p class="vista__titulo">Alertas</p>
+              <ul class="vista__alertas">
+                <li><strong>Remesa recibida</strong><span>$250.00 en tu Cuenta Raíces</span></li>
+                <li><strong>Compra aprobada</strong><span>$23.40 en supermercado</span></li>
+                <li><strong>Abono de salario</strong><span>$650.00 en tu cuenta</span></li>
+              </ul>
+            </div>
+            <div class="vista" data-vista="4">
+              <p class="vista__titulo">Mis tarjetas</p>
+              <div class="vista__tarjeta"><span>Oro</span><span>•••• 2026</span></div>
+              <div class="vista__interruptor"><span>Bloquear tarjeta</span><span class="interruptor"><span></span></span></div>
+              <p class="vista__sub">Disponible: $1,850.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 11. NUESTRO EMBLEMA ===================== -->
+  <section class="emblema" id="emblema" aria-labelledby="titulo-emblema">
+    <div class="emblema__escena">
+      <div class="envoltura emblema__rejilla">
+        <div class="emblema__marco">
+          <img src="img/logo-transparente.webp" alt="Logo de Banco Real del Pulgarcito: corona dorada, monograma RP, volcán, mapa de El Salvador y ramas de laurel" width="1254" height="1254" loading="lazy">
+        </div>
+        <div class="emblema__textos">
+          <div class="emblema__texto es-activo">
+            <h2 class="titulo-l" id="titulo-emblema">La confianza de un reino</h2>
+            <p class="entrada">Cada parte de nuestro emblema cuenta algo de lo que somos.</p>
+          </div>
+          <div class="emblema__texto">
+            <h3 class="titulo-m">La corona</h3>
+            <p>Es la palabra que se cumple. En un banco, la confianza es el patrimonio más valioso.</p>
+          </div>
+          <div class="emblema__texto">
+            <h3 class="titulo-m">Las iniciales RP</h3>
+            <p>Real del Pulgarcito: real por la nobleza en el trato y por lo verdadero, sin letra pequeña.</p>
+          </div>
+          <div class="emblema__texto">
+            <h3 class="titulo-m">El volcán</h3>
+            <p>Firme como la tierra que nos sostiene, en un país que creció entre volcanes.</p>
+          </div>
+          <div class="emblema__texto">
+            <h3 class="titulo-m">El mapa</h3>
+            <p>Gabriela Mistral llamó a El Salvador «el Pulgarcito de América». Pequeño en el mapa, enorme en su gente.</p>
+          </div>
+          <div class="emblema__texto">
+            <h3 class="titulo-m">El laurel</h3>
+            <p>El mismo de nuestro escudo nacional: la victoria de lo que se construye con paciencia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 12. SEGURIDAD, EDUCACIÓN FINANCIERA Y PREGUNTAS ===================== -->
+  <section class="ayuda" id="ayuda" aria-labelledby="titulo-ayuda">
+    <div class="envoltura ayuda__rejilla">
+      <div class="ayuda__seguridad">
+        <h2 class="titulo-l" id="titulo-ayuda">Cuidamos tu dinero contigo</h2>
+        <ul class="consejos">
+          <li><strong>Nunca te pediremos claves.</strong> Ni tu PIN ni códigos por teléfono, correo o redes sociales.</li>
+          <li><strong>Escribe tú la dirección.</strong> Entra a la e-banca tecleándola; no abras enlaces que te envíen.</li>
+          <li><strong>Activa tus alertas.</strong> Sabrás al instante de cada compra y abono.</li>
+          <li><strong>Bloquea en un toque.</strong> Si pierdes tu tarjeta, bloquéala desde la app.</li>
+        </ul>
+        <div class="aprende">
+          <h3 class="titulo-m">Aprende con nosotros</h3>
+          <ul>
+            <li><strong>La Casa del Ahorro</strong> Recorre cada habitación y aprende a manejar tu dinero en situaciones cotidianas.</li>
+            <li><strong>Biblioteca digital</strong> Tutoriales y videos para sacar provecho de la app y la e-banca.</li>
+            <li><strong>Mentorías para emprender</strong> Cursos gratuitos para quienes tienen un negocio.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ayuda__preguntas">
+        <h3 class="titulo-m">Preguntas frecuentes</h3>
+        <div class="acordeon">
+          <div class="pregunta">
+            <h4><button type="button" aria-expanded="false" aria-controls="r1" id="p1">¿Qué necesito para abrir una cuenta de ahorro?</button></h4>
+            <div class="respuesta" id="r1" role="region" aria-labelledby="p1"><p>Tener 16 años o más y tu DUI vigente. Para menores de edad existe la Cuenta Pulgarcitos. Si eres extranjero, presenta pasaporte o carné de residente, NIT y comprobantes de domicilio y arraigo.</p></div>
+          </div>
+          <div class="pregunta">
+            <h4><button type="button" aria-expanded="false" aria-controls="r2" id="p2">¿Puedo abrir mi cuenta sin ir a una agencia?</button></h4>
+            <div class="respuesta" id="r2" role="region" aria-labelledby="p2"><p>Sí. Si eres salvadoreño y mayor de 18 años, abre tu Cuenta de Ahorro Digital desde la app, 100&nbsp;% en línea y sin monto mínimo.</p></div>
+          </div>
+          <div class="pregunta">
+            <h4><button type="button" aria-expanded="false" aria-controls="r3" id="p3">¿Dónde cobro una remesa?</button></h4>
+            <div class="respuesta" id="r3" role="region" aria-labelledby="p3"><p>En cualquier agencia, cajero o corresponsal Real, o directamente en tu cuenta. Solo necesitas tu DUI y el código del envío.</p></div>
+          </div>
+          <div class="pregunta">
+            <h4><button type="button" aria-expanded="false" aria-controls="r4" id="p4">¿Qué pasa si mi cuenta está inactiva?</button></h4>
+            <div class="respuesta" id="r4" role="region" aria-labelledby="p4"><p>Las cuentas de ahorro sin movimientos por más de 12 meses pueden cancelarse. Llámanos o visita una agencia para mantenerla activa.</p></div>
+          </div>
+          <div class="pregunta">
+            <h4><button type="button" aria-expanded="false" aria-controls="r5" id="p5">¿Cómo se calcula la cuota de un crédito?</button></h4>
+            <div class="respuesta" id="r5" role="region" aria-labelledby="p5"><p>Con una cuota fija mensual que incluye capital e intereses. Pruébalo en el simulador; los seguros y comisiones se suman según cada crédito.</p></div>
+          </div>
+          <div class="pregunta">
+            <h4><button type="button" aria-expanded="false" aria-controls="r6" id="p6">¿Cómo bloqueo mi tarjeta?</button></h4>
+            <div class="respuesta" id="r6" role="region" aria-labelledby="p6"><p>Desde la app con un toque, o llamando a la Línea Real, disponible las 24 horas.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 13. CONTACTO Y PUNTOS DE SERVICIO ===================== -->
+  <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+    <div class="envoltura">
+      <header class="cabecera">
+        <h2 class="titulo-l" id="titulo-contacto">Te atendemos donde estés</h2>
+        <p class="entrada">En agencias, cajeros y corresponsales de todo el país, y también por teléfono, chat o WhatsApp.</p>
+      </header>
+    </div>
+    <figure class="mapa">
+      <div class="mapa__marco"><img src="img/mapa-1858.jpg" alt="Mapa antiguo de la República de El Salvador dibujado en 1858, con sus departamentos, ríos y volcanes" width="1920" height="1486" loading="lazy"></div>
+      <figcaption class="envoltura nota">Mapa General de la República de Salvador, Maximilian von Sonnenstern, 1858.</figcaption>
+    </figure>
+    <div class="envoltura">
+      <ul class="canales">
+        <li><h3>Línea Real</h3><p class="canales__dato">2500-0000</p><p>Las 24 horas, los 365 días del año.</p></li>
+        <li><h3>Chat en línea</h3><p class="canales__dato">App y e-banca</p><p>Escríbenos sin salir de tu Banca Móvil.</p></li>
+        <li><h3>WhatsApp Real</h3><p class="canales__dato">Consultas y solicitudes</p><p>Te respondemos en horario de agencias.</p></li>
+        <li><h3>Agencias</h3><p class="canales__dato">Lunes a viernes, 8:00 a 17:00</p><p>Sábados de 8:00 a 12:00.</p></li>
+        <li><h3>Cajeros y corresponsales</h3><p class="canales__dato">Cerca de ti</p><p>Retiros, depósitos, pagos y cobro de remesas.</p></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== PIE DE PÁGINA ===================== -->
+<footer class="pie">
+  <div class="envoltura pie__arriba">
+    <img class="pie__logo" src="img/logo-invertido.webp" alt="Banco Real del Pulgarcito. La grandeza de una nación, la confianza de un reino." width="1254" height="1254" loading="lazy">
+    <nav class="pie__columnas" aria-label="Pie de página">
+      <div>
+        <h3>Personas</h3>
+        <ul>
+          <li><a href="#cuentas">Cuentas</a></li>
+          <li><a href="#tarjetas">Tarjetas</a></li>
+          <li><a href="#creditos">Créditos</a></li>
+          <li><a href="#inversiones">Inversiones y seguros</a></li>
+          <li><a href="#exterior">Remesas y divisas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Negocios</h3>
+        <ul>
+          <li><a href="#pyme">Pyme</a></li>
+          <li><a href="#empresas">Empresas y Gobierno</a></li>
+          <li><a href="#empresas">Factura electrónica</a></li>
+          <li><a href="#app">e-banca Empresarial</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Nuestro banco</h3>
+        <ul>
+          <li><a href="#emblema">Nuestro emblema</a></li>
+          <li><a href="#ayuda">Seguridad</a></li>
+          <li><a href="#ayuda">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <p class="pie__marca" aria-hidden="true">Pulgarcito</p>
+
+  <div class="envoltura pie__abajo">
+    <p class="pie__aviso"><strong>Proyecto conceptual.</strong> Banco Real del Pulgarcito es una marca ficticia creada para un ejercicio de diseño. Este sitio no ofrece productos financieros reales ni solicita datos personales; las tasas, montos, teléfonos y tipos de cambio son ejemplos.</p>
+    <details class="creditos-fotos">
+      <summary>Créditos de las fotografías</summary>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Izalco_Volcano_from_Santa_Ana_Volcano_close_up.jpg" target="_blank" rel="noopener">Volcán de Izalco</a>, Dead.rabbit, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Lago_de_coatepeque_de_color.jpg" target="_blank" rel="noopener">Lago de Coatepeque</a>, JMRAFFi, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Pintura_del_techo_al_interior_de_el_Teatro_Nacional_de_San_Salvador.JPG" target="_blank" rel="noopener">Techo del Teatro Nacional</a>, Juakoxaguilar, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Pupusas_con_curtido_y_salsa_El_Salvador.JPG" target="_blank" rel="noopener">Pupusas con curtido</a>, JMRAFFi, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:El-salvador_san-salvador_Palacio-Nacional_2.JPG" target="_blank" rel="noopener">Palacio Nacional</a>, Arne Müseler, CC BY-SA 3.0 DE</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Suchitoto,_El_Salvador_-_panoramio_(1).jpg" target="_blank" rel="noopener">Suchitoto</a>, Pablo Nuñez, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Lago_de_Ilopango.jpg" target="_blank" rel="noopener">Lago de Ilopango</a>, JMRAFFi, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Laguna_crat%C3%A9rica_del_Volc%C3%A1n_de_Santa_Ana_-_El_Salvador.jpg" target="_blank" rel="noopener">Laguna del volcán de Santa Ana</a>, Erneestoo, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:El-Tunco-La-Libertad-3.jpg" target="_blank" rel="noopener">Playa El Tunco</a>, Pablo J Gonzalez 7, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Concepci%C3%B3n_de_Ataco,_El_Salvador_-_panoramio_(4).jpg" target="_blank" rel="noopener">Cascada en Concepción de Ataco</a>, davidjoviera, CC BY 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Teatro_Nacional_de_San_Salvador.JPG" target="_blank" rel="noopener">Teatro Nacional de San Salvador</a>, Cesar Lainez, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Lago_de_Coatepeque-El_Salvador.JPG" target="_blank" rel="noopener">Muelle en Coatepeque</a>, ElmerGuevara, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Pupusas_in_San_Salvador_-_8449776576.jpg" target="_blank" rel="noopener">Pupusas en San Salvador</a>, Rick McCharles, CC BY 2.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Arbetare_p%C3%A5_en_kaffeplantage_i_El_Salvador_1927_SLSA_1232-3_foto_14.jpg" target="_blank" rel="noopener">Finca de café, 1927</a>, Eduard Paulig, CC BY 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Mapa_General_De_La_Republica_De_Salvador_by_Maximilian_von_Sonnestern_(1858).jpg" target="_blank" rel="noopener">Mapa de 1858</a>, Maximilian von Sonnenstern, dominio público</li>
+      </ul>
+      <p>Fotos de Wikimedia Commons. Las licencias CC BY-SA piden atribución y compartir igual.</p>
+    </details>
+    <p class="pie__lema">La grandeza de una nación, la confianza de un reino.</p>
+  </div>
+</footer>
+
+<div class="cursor" aria-hidden="true"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
